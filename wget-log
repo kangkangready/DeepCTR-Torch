@@ -1,0 +1,11 @@
+--2022-11-21 21:10:23--  https://cloud.tsinghua.edu.cn/d/72a3745d59bc4c2d84ae/files/?p=%2FCriteo%2Fdac.tar.gz
+Resolving cloud.tsinghua.edu.cn (cloud.tsinghua.edu.cn)... 166.111.6.101, 2402:f000:1:406:166:111:6:101
+Connecting to cloud.tsinghua.edu.cn (cloud.tsinghua.edu.cn)|166.111.6.101|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 9710 (9.5K) [text/html]
+Saving to: ‘index.html?p=%2FCriteo%2Fdac.tar.gz’
+
+index.html?p=%2FCriteo%2Fdac.tar.gz            0%[                                                                                            ]       0  --.-KB/s               index.html?p=%2FCriteo%2Fdac.tar.gz          100%[===========================================================================================>]   9.48K  --.-KB/s    in 0s      
+
+2022-11-21 21:10:24 (352 MB/s) - ‘index.html?p=%2FCriteo%2Fdac.tar.gz’ saved [9710/9710]
+
