@@ -128,4 +128,3 @@ dmypy.json
 #data,checkpoint
 *.h5
 data/
-docs/pics
