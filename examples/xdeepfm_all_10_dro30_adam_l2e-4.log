@@ -1,0 +1,46 @@
+Script started on 2022-12-19 13:36:25+0800
+(base) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ rim[K[K[Krim[K[K[Krim[K[K[Krim[K[K[Krim[K[K[Kpython run_xdeepfm_all.py 
+Traceback (most recent call last):
+  File "/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/run_xdeepfm_all.py", line 8, in <module>
+    from deepctr_torch.inputs import SparseFeat, DenseFeat, get_feature_names
+ModuleNotFoundError: No module named 'deepctr_torch'
+(base) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ conda activate CTR
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ conda activate CTRpython run_xdeepfm_all.py 
+2022-12-19 13:37:32.847280: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-19 13:37:36.177849: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-12-19 13:37:36.177997: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-12-19 13:37:36.178016: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+rows30: 45840617
+1
+2
+3
+cuda ready...
+/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/layers/utils.py:61: FutureWarning: The behavior of `series[i:j]` with an integer-dtype index is deprecated. In a future version, this will be treated as *label-based* indexing, consistent with e.g. `series[i]` lookups. To retain the old behavior, use `series.iloc[i:j]`. To get the future behavior, use `series.loc[i:j]`.
+  return [None if x is None else x[start:stop] for x in arrays]
+cuda:4
+Train on 29337994 samples, validate on 7334499 samples, 7163 steps per epoch
+Epoch 1/10
+1399s - loss:  0.4629 - binary_crossentropy:  0.4618 - auc:  0.7872 - val_binary_crossentropy:  0.4536 - val_auc:  0.7970
+Epoch 2/10
+1408s - loss:  0.4145 - binary_crossentropy:  0.4116 - auc:  0.8385 - val_binary_crossentropy:  0.4581 - val_auc:  0.7948
+Epoch 3/10
+1406s - loss:  0.3574 - binary_crossentropy:  0.3539 - auc:  0.8814 - val_binary_crossentropy:  0.4768 - val_auc:  0.7835
+Epoch 4/10
+1408s - loss:  0.3506 - binary_crossentropy:  0.3474 - auc:  0.8853 - val_binary_crossentropy:  0.4796 - val_auc:  0.7847
+Epoch 5/10
+1392s - loss:  0.3603 - binary_crossentropy:  0.3567 - auc:  0.8789 - val_binary_crossentropy:  0.4784 - val_auc:  0.7851
+Epoch 6/10
+1330s - loss:  0.3483 - binary_crossentropy:  0.3444 - auc:  0.8872 - val_binary_crossentropy:  0.4830 - val_auc:  0.7813
+Epoch 7/10
+1301s - loss:  0.3391 - binary_crossentropy:  0.3352 - auc:  0.8934 - val_binary_crossentropy:  0.4875 - val_auc:  0.7807
+Epoch 8/10
+1307s - loss:  0.3404 - binary_crossentropy:  0.3364 - auc:  0.8928 - val_binary_crossentropy:  0.4859 - val_auc:  0.7807
+Epoch 9/10
+1306s - loss:  0.3409 - binary_crossentropy:  0.3367 - auc:  0.8927 - val_binary_crossentropy:  0.4872 - val_auc:  0.7804
+Epoch 10/10
+1311s - loss:  0.3337 - binary_crossentropy:  0.3294 - auc:  0.8974 - val_binary_crossentropy:  0.4932 - val_auc:  0.7766
+
+test LogLoss 0.4928
+test AUC 0.7772
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ 

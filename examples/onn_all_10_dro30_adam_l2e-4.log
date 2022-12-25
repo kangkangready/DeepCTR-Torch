@@ -1,0 +1,1175 @@
+Script started on 2022-12-20 20:51:27+0800
+(base) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ conda activate CTR
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ python run_[K[K[K[Krun_onn_all.py 
+2022-12-20 20:51:40.383430: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-20 20:51:41.729574: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-12-20 20:51:41.729682: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-12-20 20:51:41.729695: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+rows30: 45840617
+1
+2
+3
+cuda ready...
+/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/layers/utils.py:61: FutureWarning: The behavior of `series[i:j]` with an integer-dtype index is deprecated. In a future version, this will be treated as *label-based* indexing, consistent with e.g. `series[i]` lookups. To retain the old behavior, use `series.iloc[i:j]`. To get the future behavior, use `series.loc[i:j]`.
+  return [None if x is None else x[start:stop] for x in arrays]
+cuda:4
+Train on 29337994 samples, validate on 7334499 samples, 7163 steps per epoch
+Traceback (most recent call last):
+  File "/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/run_onn_all.py", line 84, in <module>
+    history = model.fit(train_model_input, train[target].values, batch_size=4096, epochs=10, verbose=2,
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/models/basemodel.py", line 261, in fit
+    total_loss.backward()
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 108.00 MiB (GPU 4; 22.06 GiB total capacity; 20.37 GiB already allocated; 44.00 MiB free; 20.76 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ python run_onn_all.py 
+2022-12-20 22:23:11.852746: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-20 22:23:13.150862: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-12-20 22:23:13.150976: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-12-20 22:23:13.150990: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+rows30: 45840617
+1
+2
+3
+cuda ready...
+/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/layers/utils.py:61: FutureWarning: The behavior of `series[i:j]` with an integer-dtype index is deprecated. In a future version, this will be treated as *label-based* indexing, consistent with e.g. `series[i]` lookups. To retain the old behavior, use `series.iloc[i:j]`. To get the future behavior, use `series.loc[i:j]`.
+  return [None if x is None else x[start:stop] for x in arrays]
+cuda:3
+Train on 29337994 samples, validate on 7334499 samples, 14326 steps per epoch
+Traceback (most recent call last):
+  File "/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/run_onn_all.py", line 84, in <module>
+    history = model.fit(train_model_input, train[target].values, batch_size=2048, epochs=10, verbose=2,
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/models/basemodel.py", line 261, in fit
+    total_loss.backward()
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 84.00 MiB (GPU 3; 22.06 GiB total capacity; 20.08 GiB already allocated; 60.06 MiB free; 20.74 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ python run_onn_all.py [4Pconda activate CTR[1Ptmux new -s l2e-4ls[Knew -s dro30adam[3Pconda activate CTR[1Ptmux new -s dro50cd code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/[23Ponda activate conversationd code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/[33Ptmux new -s dro50conda activate CTRtmux new -s dro30adamls[Knew -s l2e-4conda activate CTRpython run_onn_all.py [K[K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ python run_onn_all.py [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ python run_onn_all.py 
+2022-12-21 01:29:21.353863: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-21 01:29:22.620047: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-12-21 01:29:22.620180: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-12-21 01:29:22.620202: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+WARNING:tensorflow:From /cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/tensorflow/python/compat/v2_compat.py:107: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+rows30: 45840617
+1
+2
+3
+cuda ready...
+/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/layers/utils.py:61: FutureWarning: The behavior of `series[i:j]` with an integer-dtype index is deprecated. In a future version, this will be treated as *label-based* indexing, consistent with e.g. `series[i]` lookups. To retain the old behavior, use `series.iloc[i:j]`. To get the future behavior, use `series.loc[i:j]`.
+  return [None if x is None else x[start:stop] for x in arrays]
+cuda:3
+Train on 29337994 samples, validate on 7334499 samples, 7163 steps per epoch
+Traceback (most recent call last):
+  File "/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/run_onn_all.py", line 87, in <module>
+    history = model.fit(train_model_input, train[target].values, batch_size=4096, epochs=10, verbose=2,
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/models/basemodel.py", line 261, in fit
+    total_loss.backward()
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 108.00 MiB (GPU 3; 22.06 GiB total capacity; 20.37 GiB already allocated; 44.00 MiB free; 20.76 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ exit[K[K[K[Kexi[K[K[K[K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ python run_onn_all.py 
+2022-12-22 00:02:34.534038: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-22 00:02:35.816782: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-12-22 00:02:35.816893: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-12-22 00:02:35.816906: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+rows30: 45840617
+1
+2
+3
+cuda ready...
+/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/layers/utils.py:61: FutureWarning: The behavior of `series[i:j]` with an integer-dtype index is deprecated. In a future version, this will be treated as *label-based* indexing, consistent with e.g. `series[i]` lookups. To retain the old behavior, use `series.iloc[i:j]`. To get the future behavior, use `series.loc[i:j]`.
+  return [None if x is None else x[start:stop] for x in arrays]
+cuda:3
+Train on 29337994 samples, validate on 7334499 samples, 7163 steps per epoch
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Active memory         |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| GPU reserved memory   |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Non-releasable memory |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Allocations           |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Active allocs         |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| GPU reserved segments |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Non-releasable allocs |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize allocations  |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize GPU segments |       0    |       0    |       0    |       0    |
+|===========================================================================|
+
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Active memory         |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| GPU reserved memory   |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Non-releasable memory |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Allocations           |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Active allocs         |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| GPU reserved segments |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Non-releasable allocs |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize allocations  |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize GPU segments |       0    |       0    |       0    |       0    |
+|===========================================================================|
+
+Traceback (most recent call last):
+  File "/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/run_onn_all.py", line 85, in <module>
+    history = model.fit(train_model_input, train[target].values, batch_size=4096, epochs=10, verbose=2,
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/models/basemodel.py", line 263, in fit
+    total_loss.backward()
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 108.00 MiB (GPU 3; 22.06 GiB total capacity; 20.37 GiB already allocated; 44.00 MiB free; 20.76 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ python run_onn_all.py [4Pconda activate CTR[1Ptmux new -s l2e-4ls[Knew -s dro30adam[3Pconda activate CTR[1Ptmux new -s dro50cd code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/[23Ponda activate conversationls[Kcd code/kkcode/[5Pnvidia-smiconda activate conversationtmux ls[Kattach -t ctrls[Kconda activate conversation[17Pnvidia-smi[K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ nvidia-smi[K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ nvidia-smiconda activate conversation[17Pnvidia-smiq[Kscript -f xdeepfm_all_10_dro30_adam.log exit[Kconda activate conversationexit[Kscript -f xdeepfm_all_10_dro30_adam.log q[Knvidia-smiconda activate conversationtmux ls[Kattach -t ctrls[Kconda activate conversation[17Pnvidia-smicd code/kkcode/ls[Kconda activate conversationd code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/[33Ptmux new -s dro50conda activate CTRtmux new -s dro30adamls[Knew -s l2e-4conda activate CTRpython run_onn_all.py [Kpython run_onn_all.py 
+2022-12-22 00:45:51.539014: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-22 00:45:52.824743: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-12-22 00:45:52.824865: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-12-22 00:45:52.824878: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+rows30: 45840617
+^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A1
+2
+3
+cuda ready...
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Active memory         |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| GPU reserved memory   |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Non-releasable memory |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Allocations           |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Active allocs         |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| GPU reserved segments |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Non-releasable allocs |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize allocations  |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize GPU segments |       0    |       0    |       0    |       0    |
+|===========================================================================|
+
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Active memory         |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| GPU reserved memory   |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Non-releasable memory |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Allocations           |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Active allocs         |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| GPU reserved segments |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Non-releasable allocs |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize allocations  |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize GPU segments |       0    |       0    |       0    |       0    |
+|===========================================================================|
+
+/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/layers/utils.py:61: FutureWarning: The behavior of `series[i:j]` with an integer-dtype index is deprecated. In a future version, this will be treated as *label-based* indexing, consistent with e.g. `series[i]` lookups. To retain the old behavior, use `series.iloc[i:j]`. To get the future behavior, use `series.loc[i:j]`.
+  return [None if x is None else x[start:stop] for x in arrays]
+cuda:3
+Train on 29337994 samples, validate on 7334499 samples, 7163 steps per epoch
+Traceback (most recent call last):
+  File "/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/run_onn_all.py", line 85, in <module>
+    history = model.fit(train_model_input, train[target].values, batch_size=4096, epochs=10, verbose=2,
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/models/basemodel.py", line 261, in fit
+    total_loss.backward()
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 108.00 MiB (GPU 3; 22.06 GiB total capacity; 20.37 GiB already allocated; 44.00 MiB free; 20.76 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ python run_onn_all.py [4Pconda activate CTR[1Ptmux new -s l2e-4ls[Knew -s dro30adam[3Pconda activate CTR[1Ptmux new -s dro50cd code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/[23Ponda activate conversationls[Kcd code/kkcode/[5Pnvidia-smiconda activate conversationtmux ls[Kattach -t ctrls[Kconda activate conversation[17Pnvidia-smiq[Kscript -f xdeepfm_all_10_dro30_adam.log exit[Kconda activate conversation[1Ppython run_xdeepfm_all.py [8Pconda activate CTR[8Pnvidia-smi[5Pps -unvidia-smitmux new -s dro40cd code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/[23Ponda activate conversation[10Ptmux new -s dro30cd code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/[23Ponda activate conversation[10Ptmux new -s dro20cd code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/[23Ponda activate conversation[10Ptmux new -s dro10[K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ tmux new -s dro10[K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ tmux new -s dro10[K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ tmux new -s dro10[K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ tmux new -s dro10[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ python run_xdeepfm_all.py 
+2022-12-22 17:38:58.550592: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-22 17:38:59.833853: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-12-22 17:38:59.833971: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-12-22 17:38:59.833984: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+rows30: 45840617
+1
+2
+3
+cuda ready...
+/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/layers/utils.py:61: FutureWarning: The behavior of `series[i:j]` with an integer-dtype index is deprecated. In a future version, this will be treated as *label-based* indexing, consistent with e.g. `series[i]` lookups. To retain the old behavior, use `series.iloc[i:j]`. To get the future behavior, use `series.loc[i:j]`.
+  return [None if x is None else x[start:stop] for x in arrays]
+cuda:4
+Train on 29337994 samples, validate on 7334499 samples, 7163 steps per epoch
+^CTraceback (most recent call last):
+  File "/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/run_xdeepfm_all.py", line 84, in <module>
+    history = model.fit(train_model_input, train[target].values, batch_size=4096, epochs=10, verbose=2,
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/models/basemodel.py", line 241, in fit
+    for _, (x_train, y_train) in t:
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/tqdm/std.py", line 1183, in __iter__
+    for obj in iterable:
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 628, in __next__
+    data = self._next_data()
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 671, in _next_data
+    data = self._dataset_fetcher.fetch(index)  # may raise StopIteration
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 61, in fetch
+    return self.collate_fn(data)
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 265, in default_collate
+    return collate(batch, collate_fn_map=default_collate_fn_map)
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/utils/data/_utils/collate.py", line 140, in collate
+    transposed = list(zip(*batch))  # It may be accessed twice, so we use a list.
+KeyboardInterrupt
+
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ python run_xdeepfm_all.py [4Ponn[C[C[C[C[C[C[C[C
+2022-12-22 18:04:11.350639: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-22 18:04:12.652818: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-12-22 18:04:12.652936: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-12-22 18:04:12.652949: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+rows30: 45840617
+1
+2
+3
+cuda ready...
+Traceback (most recent call last):
+  File "/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/run_onn_all.py", line 78, in <module>
+    print(torch.cuda.memory_summary(device=device))
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/cuda/memory.py", line 496, in memory_summary
+    current = stats[prefix + "current"]
+KeyError: 'allocated_bytes.all.current'
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ python run_onn_all.py 
+2022-12-22 18:43:11.769246: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-22 18:43:13.153455: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-12-22 18:43:13.153596: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-12-22 18:43:13.153609: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+rows30: 45840617
+1
+2
+3
+cuda ready...
+0
+14241589760
+/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/layers/utils.py:61: FutureWarning: The behavior of `series[i:j]` with an integer-dtype index is deprecated. In a future version, this will be treated as *label-based* indexing, consistent with e.g. `series[i]` lookups. To retain the old behavior, use `series.iloc[i:j]`. To get the future behavior, use `series.loc[i:j]`.
+  return [None if x is None else x[start:stop] for x in arrays]
+cuda:3
+Train on 29337994 samples, validate on 7334499 samples, 7163 steps per epoch
+Traceback (most recent call last):
+  File "/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/run_onn_all.py", line 85, in <module>
+    history = model.fit(train_model_input, train[target].values, batch_size=4096, epochs=10, verbose=2,
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/models/basemodel.py", line 261, in fit
+    total_loss.backward()
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 108.00 MiB (GPU 3; 22.06 GiB total capacity; 20.37 GiB already allocated; 44.00 MiB free; 20.76 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ conda activate conversation
+(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ conda activate conversation[5Ppython run_onn_all.py [4@xdeepfm[C[C[C[C[C[C[C[C[4Ponn[C[C[C[C[C[C[C[C[4Pconda activate CTR[1Ptmux new -s l2e-4ls[Knew -s dro30adam[3Pconda activate CTRtmux new -s dro30adamls[Knew -s l2e-4conda activate CTRpython run_onn_all.py [4@xdeepfm[C[C[C[C[C[C[C[C[4Ponn[C[C[C[C[C[C[C[Cconda activate conversation[Kconda activate conversation
+(conversation) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ conda activate CTR
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ conda activate CTRconversation[5Ppython run_onn_all.py 
+2022-12-22 21:32:27.529267: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-22 21:32:28.800501: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-12-22 21:32:28.800616: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-12-22 21:32:28.800630: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+rows30: 45840617
+^C^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^Z
+[1]+  Stopped                 python run_onn_all.py
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ python run_onn_all.py 
+2022-12-22 21:35:49.820706: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-22 21:35:51.180996: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-12-22 21:35:51.181110: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-12-22 21:35:51.181122: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+rows30: 458
+1
+2
+3
+cuda ready...
+Traceback (most recent call last):
+  File "/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/run_onn_all.py", line 78, in <module>
+    print(torch.cuda.memory_summary(device=device))
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/cuda/memory.py", line 496, in memory_summary
+    current = stats[prefix + "current"]
+KeyError: 'allocated_bytes.all.current'
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ python run_onn_all.py 
+2022-12-22 21:36:10.155417: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-22 21:36:11.241248: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-12-22 21:36:11.241359: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-12-22 21:36:11.241372: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+rows30: 458
+1
+2
+3
+cuda ready...
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Active memory         |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| GPU reserved memory   |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Non-releasable memory |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Allocations           |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Active allocs         |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| GPU reserved segments |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Non-releasable allocs |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize allocations  |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize GPU segments |       0    |       0    |       0    |       0    |
+|===========================================================================|
+
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Active memory         |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| GPU reserved memory   |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Non-releasable memory |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Allocations           |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Active allocs         |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| GPU reserved segments |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Non-releasable allocs |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize allocations  |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize GPU segments |       0    |       0    |       0    |       0    |
+|===========================================================================|
+
+/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/layers/utils.py:61: FutureWarning: The behavior of `series[i:j]` with an integer-dtype index is deprecated. In a future version, this will be treated as *label-based* indexing, consistent with e.g. `series[i]` lookups. To retain the old behavior, use `series.iloc[i:j]`. To get the future behavior, use `series.loc[i:j]`.
+  return [None if x is None else x[start:stop] for x in arrays]
+cuda:3
+Train on 292 samples, validate on 74 samples, 1 steps per epoch
+Epoch 1/10
+0s - loss:  0.7593 - binary_crossentropy:  0.6954 - auc:  0.4870 - val_binary_crossentropy:  0.6867 - val_auc:  0.5801
+Epoch 2/10
+0s - loss:  0.7473 - binary_crossentropy:  0.6835 - auc:  0.9991 - val_binary_crossentropy:  0.6778 - val_auc:  0.5624
+Epoch 3/10
+0s - loss:  0.7358 - binary_crossentropy:  0.6720 - auc:  0.9994 - val_binary_crossentropy:  0.6690 - val_auc:  0.5574
+Epoch 4/10
+0s - loss:  0.7241 - binary_crossentropy:  0.6605 - auc:  0.9989 - val_binary_crossentropy:  0.6602 - val_auc:  0.5498
+Epoch 5/10
+0s - loss:  0.7123 - binary_crossentropy:  0.6488 - auc:  0.9986 - val_binary_crossentropy:  0.6513 - val_auc:  0.5473
+Epoch 6/10
+0s - loss:  0.7002 - binary_crossentropy:  0.6368 - auc:  0.9985 - val_binary_crossentropy:  0.6422 - val_auc:  0.5435
+Epoch 7/10
+0s - loss:  0.6877 - binary_crossentropy:  0.6243 - auc:  0.9984 - val_binary_crossentropy:  0.6332 - val_auc:  0.5422
+Epoch 8/10
+0s - loss:  0.6747 - binary_crossentropy:  0.6114 - auc:  0.9982 - val_binary_crossentropy:  0.6240 - val_auc:  0.5410
+Epoch 9/10
+0s - loss:  0.6611 - binary_crossentropy:  0.5980 - auc:  0.9982 - val_binary_crossentropy:  0.6149 - val_auc:  0.5460
+Epoch 10/10
+0s - loss:  0.6473 - binary_crossentropy:  0.5842 - auc:  0.9982 - val_binary_crossentropy:  0.6058 - val_auc:  0.5460
+
+test LogLoss 0.6128
+test AUC 0.6316
+^C
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ python run_onn_all.py [Kpython run_onn_all.py 
+2022-12-22 21:36:35.314098: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-22 21:36:36.429029: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-12-22 21:36:36.429141: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-12-22 21:36:36.429152: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+rows30: 4585
+1
+2
+3
+cuda ready...
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Active memory         |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| GPU reserved memory   |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Non-releasable memory |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Allocations           |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Active allocs         |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| GPU reserved segments |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Non-releasable allocs |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize allocations  |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize GPU segments |       0    |       0    |       0    |       0    |
+|===========================================================================|
+
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Active memory         |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| GPU reserved memory   |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Non-releasable memory |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Allocations           |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Active allocs         |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| GPU reserved segments |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Non-releasable allocs |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize allocations  |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize GPU segments |       0    |       0    |       0    |       0    |
+|===========================================================================|
+
+/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/layers/utils.py:61: FutureWarning: The behavior of `series[i:j]` with an integer-dtype index is deprecated. In a future version, this will be treated as *label-based* indexing, consistent with e.g. `series[i]` lookups. To retain the old behavior, use `series.iloc[i:j]`. To get the future behavior, use `series.loc[i:j]`.
+  return [None if x is None else x[start:stop] for x in arrays]
+cuda:3
+Train on 2934 samples, validate on 734 samples, 1 steps per epoch
+Epoch 1/10
+0s - loss:  0.7368 - binary_crossentropy:  0.6976 - auc:  0.4856 - val_binary_crossentropy:  0.6885 - val_auc:  0.5682
+Epoch 2/10
+0s - loss:  0.7252 - binary_crossentropy:  0.6861 - auc:  0.9672 - val_binary_crossentropy:  0.6795 - val_auc:  0.5699
+Epoch 3/10
+0s - loss:  0.7140 - binary_crossentropy:  0.6750 - auc:  0.9834 - val_binary_crossentropy:  0.6706 - val_auc:  0.5701
+Epoch 4/10
+0s - loss:  0.7028 - binary_crossentropy:  0.6639 - auc:  0.9830 - val_binary_crossentropy:  0.6618 - val_auc:  0.5712
+Epoch 5/10
+0s - loss:  0.6916 - binary_crossentropy:  0.6527 - auc:  0.9821 - val_binary_crossentropy:  0.6529 - val_auc:  0.5729
+Epoch 6/10
+0s - loss:  0.6803 - binary_crossentropy:  0.6414 - auc:  0.9819 - val_binary_crossentropy:  0.6441 - val_auc:  0.5740
+memory_summaryEpoch 7/10
+0s - loss:  0.6687 - binary_crossentropy:  0.6300 - auc:  0.9820 - val_binary_crossentropy:  0.6352 - val_auc:  0.5753
+Epoch 8/10
+0s - loss:  0.6568 - binary_crossentropy:  0.6181 - auc:  0.9825 - val_binary_crossentropy:  0.6261 - val_auc:  0.5766
+Epoch 9/10
+0s - loss:  0.6444 - binary_crossentropy:  0.6057 - auc:  0.9831 - val_binary_crossentropy:  0.6170 - val_auc:  0.5780
+^CTraceback (most recent call last):
+  File "/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/run_onn_all.py", line 85, in <module>
+    history = model.fit(train_model_input, train[target].values, batch_size=4096, epochs=10, verbose=2,
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/models/basemodel.py", line 283, in fit
+    eval_result = self.evaluate(val_x, val_y, batch_size)
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/models/basemodel.py", line 319, in evaluate
+    pred_ans = self.predict(x, batch_size)
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/models/basemodel.py", line 349, in predict
+    y_pred = model(x).cpu().data.numpy()  # .squeeze()
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/models/onn.py", line 144, in forward
+    spare_second_order_embedding_list = self.__input_from_second_order_column(X, self.dnn_feature_columns,
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/models/onn.py", line 113, in __input_from_second_order_column
+    second_order_embedding_dict[first_name + "+" + second_name](
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/models/onn.py", line 31, in forward
+    first_emb = self.emb1(first)
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1190, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/nn/modules/sparse.py", line 160, in forward
+    return F.embedding(
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/nn/functional.py", line 2210, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+KeyboardInterrupt
+
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ python run_onn_all.py 
+2022-12-22 21:36:50.501113: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-22 21:36:51.717047: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-12-22 21:36:51.717162: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-12-22 21:36:51.717175: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+rows30: 45850
+1
+2
+3
+cuda ready...
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Active memory         |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| GPU reserved memory   |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Non-releasable memory |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Allocations           |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Active allocs         |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| GPU reserved segments |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Non-releasable allocs |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize allocations  |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize GPU segments |       0    |       0    |       0    |       0    |
+|===========================================================================|
+
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Active memory         |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| GPU reserved memory   |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Non-releasable memory |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Allocations           |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Active allocs         |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| GPU reserved segments |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Non-releasable allocs |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize allocations  |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize GPU segments |       0    |       0    |       0    |       0    |
+|===========================================================================|
+
+/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/layers/utils.py:61: FutureWarning: The behavior of `series[i:j]` with an integer-dtype index is deprecated. In a future version, this will be treated as *label-based* indexing, consistent with e.g. `series[i]` lookups. To retain the old behavior, use `series.iloc[i:j]`. To get the future behavior, use `series.loc[i:j]`.
+  return [None if x is None else x[start:stop] for x in arrays]
+cuda:3
+Train on 29344 samples, validate on 7336 samples, 8 steps per epoch
+Epoch 1/10
+3s - loss:  0.8307 - binary_crossentropy:  0.6607 - auc:  0.5752 - val_binary_crossentropy:  0.6267 - val_auc:  0.6230
+^CTraceback (most recent call last):
+  File "/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/run_onn_all.py", line 85, in <module>
+    history = model.fit(train_model_input, train[target].values, batch_size=4096, epochs=10, verbose=2,
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/models/basemodel.py", line 261, in fit
+    total_loss.backward()
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
+
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ python run_onn_all.py 
+2022-12-22 21:37:10.867295: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-22 21:37:12.047486: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-12-22 21:37:12.047601: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-12-22 21:37:12.047613: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+rows30: 458506
+1
+2
+3
+cuda ready...
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Active memory         |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| GPU reserved memory   |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Non-releasable memory |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Allocations           |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Active allocs         |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| GPU reserved segments |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Non-releasable allocs |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize allocations  |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize GPU segments |       0    |       0    |       0    |       0    |
+|===========================================================================|
+
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Active memory         |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| GPU reserved memory   |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Non-releasable memory |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Allocations           |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Active allocs         |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| GPU reserved segments |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Non-releasable allocs |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize allocations  |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize GPU segments |       0    |       0    |       0    |       0    |
+|===========================================================================|
+
+/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/layers/utils.py:61: FutureWarning: The behavior of `series[i:j]` with an integer-dtype index is deprecated. In a future version, this will be treated as *label-based* indexing, consistent with e.g. `series[i]` lookups. To retain the old behavior, use `series.iloc[i:j]`. To get the future behavior, use `series.loc[i:j]`.
+  return [None if x is None else x[start:stop] for x in arrays]
+cuda:3
+Train on 293443 samples, validate on 73361 samples, 72 steps per epoch
+Epoch 1/10
+24s - loss:  1.3154 - binary_crossentropy:  0.5518 - auc:  0.6697 - val_binary_crossentropy:  0.5006 - val_auc:  0.7404
+^CTraceback (most recent call last):
+  File "/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/run_onn_all.py", line 85, in <module>
+    history = model.fit(train_model_input, train[target].values, batch_size=4096, epochs=10, verbose=2,
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/models/basemodel.py", line 261, in fit
+    total_loss.backward()
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+KeyboardInterrupt
+
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ python run_onn_all.py [Kpython run_onn_all.py 
+2022-12-22 21:38:14.870398: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-22 21:38:16.119249: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-12-22 21:38:16.119363: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-12-22 21:38:16.119375: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+rows30: 4585061
+1
+2
+3
+cuda ready...
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Active memory         |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| GPU reserved memory   |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Non-releasable memory |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Allocations           |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Active allocs         |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| GPU reserved segments |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Non-releasable allocs |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize allocations  |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize GPU segments |       0    |       0    |       0    |       0    |
+|===========================================================================|
+
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Active memory         |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| GPU reserved memory   |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Non-releasable memory |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Allocations           |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Active allocs         |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| GPU reserved segments |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Non-releasable allocs |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize allocations  |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize GPU segments |       0    |       0    |       0    |       0    |
+|===========================================================================|
+
+/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/layers/utils.py:61: FutureWarning: The behavior of `series[i:j]` with an integer-dtype index is deprecated. In a future version, this will be treated as *label-based* indexing, consistent with e.g. `series[i]` lookups. To retain the old behavior, use `series.iloc[i:j]`. To get the future behavior, use `series.loc[i:j]`.
+  return [None if x is None else x[start:stop] for x in arrays]
+cuda:3
+Train on 2934438 samples, validate on 733610 samples, 717 steps per epoch
+^CTraceback (most recent call last):
+  File "/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/run_onn_all.py", line 85, in <module>
+    history = model.fit(train_model_input, train[target].values, batch_size=4096, epochs=10, verbose=2,
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/models/basemodel.py", line 255, in fit
+    reg_loss = self.get_regularization_loss()
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/models/basemodel.py", line 424, in get_regularization_loss
+    total_reg_loss += torch.sum(l2 * torch.square(parameter))
+KeyboardInterrupt
+
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/codde/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [KM(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeeepCTR-Torch/examples$ [KM(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ python run_onn_all.py 
+^CTraceback (most recent call last):
+  File "/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/run_onn_all.py", line 3, in <module>
+    import torch
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/__init__.py", line 881, in <module>
+    import torch.nn.qat
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/nn/qat/__init__.py", line 7, in <module>
+    from . import dynamic  # noqa: F403
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/nn/qat/dynamic/__init__.py", line 7, in <module>
+    from .modules import *  # noqa: F403
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/nn/qat/dynamic/modules/__init__.py", line 1, in <module>
+    from .linear import Linear
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/nn/qat/dynamic/modules/linear.py", line 10, in <module>
+    from torch.ao.nn.qat.dynamic.modules.linear import Linear
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/ao/nn/qat/dynamic/__init__.py", line 1, in <module>
+    from .modules import *  # noqa: F403
+  File "<frozen importlib._bootstrap>", line 1027, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1006, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 688, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 975, in get_code
+  File "<frozen importlib._bootstrap_external>", line 1074, in get_data
+KeyboardInterrupt
+
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ python run_onn_all.py 
+2022-12-22 21:44:14.544566: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-22 21:44:15.915634: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-12-22 21:44:15.915749: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-12-22 21:44:15.915763: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+rows30: 45840617
+1
+2
+3
+cuda ready...
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Active memory         |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| GPU reserved memory   |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Non-releasable memory |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Allocations           |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Active allocs         |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| GPU reserved segments |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Non-releasable allocs |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize allocations  |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize GPU segments |       0    |       0    |       0    |       0    |
+|===========================================================================|
+
+|===========================================================================|
+|                  PyTorch CUDA memory summary, device ID 0                 |
+|---------------------------------------------------------------------------|
+|            CUDA OOMs: 0            |        cudaMalloc retries: 0         |
+|===========================================================================|
+|        Metric         | Cur Usage  | Peak Usage | Tot Alloc  | Tot Freed  |
+|---------------------------------------------------------------------------|
+| Allocated memory      |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Active memory         |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| GPU reserved memory   |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Non-releasable memory |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from large pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|       from small pool |       0 B  |       0 B  |       0 B  |       0 B  |
+|---------------------------------------------------------------------------|
+| Allocations           |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Active allocs         |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| GPU reserved segments |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Non-releasable allocs |       0    |       0    |       0    |       0    |
+|       from large pool |       0    |       0    |       0    |       0    |
+|       from small pool |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize allocations  |       0    |       0    |       0    |       0    |
+|---------------------------------------------------------------------------|
+| Oversize GPU segments |       0    |       0    |       0    |       0    |
+|===========================================================================|
+
+/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/layers/utils.py:61: FutureWarning: The behavior of `series[i:j]` with an integer-dtype index is deprecated. In a future version, this will be treated as *label-based* indexing, consistent with e.g. `series[i]` lookups. To retain the old behavior, use `series.iloc[i:j]`. To get the future behavior, use `series.loc[i:j]`.
+  return [None if x is None else x[start:stop] for x in arrays]
+cuda:3
+Train on 29337994 samples, validate on 7334499 samples, 28651 steps per epoch
+Traceback (most recent call last):
+  File "/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples/run_onn_all.py", line 85, in <module>
+    history = model.fit(train_model_input, train[target].values, batch_size=1024, epochs=10, verbose=2,
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/models/basemodel.py", line 261, in fit
+    total_loss.backward()
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/_tensor.py", line 487, in backward
+    torch.autograd.backward(
+  File "/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/torch/autograd/__init__.py", line 197, in backward
+    Variable._execution_engine.run_backward(  # Calls into the C++ engine to run the backward pass
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 128.00 MiB (GPU 3; 22.06 GiB total capacity; 20.15 GiB already allocated; 12.00 MiB free; 20.79 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [K(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ exit
+There are stopped jobs.
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ exit
+exit
+
+Script done on 2022-12-22 22:19:50+0800

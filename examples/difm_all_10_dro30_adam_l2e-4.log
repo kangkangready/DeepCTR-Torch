@@ -1,0 +1,41 @@
+Script started on 2022-12-24 01:57:05+0800
+(base) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ conda activate CTR
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ conda ac[K[K[K[K[K[K[K[Kpython run+[K_dif[K[K[KDIFM_all.py 
+2022-12-24 01:57:27.246411: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-24 01:57:28.550924: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-12-24 01:57:28.551051: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-12-24 01:57:28.551064: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+rows30: 45840617
+1
+2
+3
+cuda ready...
+/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/layers/utils.py:61: FutureWarning: The behavior of `series[i:j]` with an integer-dtype index is deprecated. In a future version, this will be treated as *label-based* indexing, consistent with e.g. `series[i]` lookups. To retain the old behavior, use `series.iloc[i:j]`. To get the future behavior, use `series.loc[i:j]`.
+  return [None if x is None else x[start:stop] for x in arrays]
+cuda:3
+Train on 29337994 samples, validate on 7334499 samples, 7163 steps per epoch
+Epoch 1/10
+1008s - loss:  0.4730 - binary_crossentropy:  0.4720 - auc:  0.7742 - val_binary_crossentropy:  0.4638 - val_auc:  0.7850
+Epoch 2/10
+1002s - loss:  0.3945 - binary_crossentropy:  0.3905 - auc:  0.8541 - val_binary_crossentropy:  0.4720 - val_auc:  0.7797
+Epoch 3/10
+1004s - loss:  0.3915 - binary_crossentropy:  0.3862 - auc:  0.8593 - val_binary_crossentropy:  0.4812 - val_auc:  0.7764
+Epoch 4/10
+1003s - loss:  0.3587 - binary_crossentropy:  0.3545 - auc:  0.8807 - val_binary_crossentropy:  0.5014 - val_auc:  0.7704
+Epoch 5/10
+1002s - loss:  0.3553 - binary_crossentropy:  0.3511 - auc:  0.8827 - val_binary_crossentropy:  0.4988 - val_auc:  0.7692
+Epoch 6/10
+1003s - loss:  0.3628 - binary_crossentropy:  0.3578 - auc:  0.8786 - val_binary_crossentropy:  0.5042 - val_auc:  0.7665
+Epoch 7/10
+1005s - loss:  0.3578 - binary_crossentropy:  0.3519 - auc:  0.8828 - val_binary_crossentropy:  0.5042 - val_auc:  0.7678
+Epoch 8/10
+999s - loss:  0.3433 - binary_crossentropy:  0.3380 - auc:  0.8921 - val_binary_crossentropy:  0.5077 - val_auc:  0.7664
+Epoch 9/10
+1000s - loss:  0.3423 - binary_crossentropy:  0.3366 - auc:  0.8931 - val_binary_crossentropy:  0.5172 - val_auc:  0.7635
+Epoch 10/10
+1001s - loss:  0.3457 - binary_crossentropy:  0.3397 - auc:  0.8912 - val_binary_crossentropy:  0.5127 - val_auc:  0.7649
+
+test LogLoss 0.5124
+test AUC 0.7654
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ 

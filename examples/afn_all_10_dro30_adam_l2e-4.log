@@ -1,0 +1,41 @@
+Script started on 2022-12-23 22:54:13+0800
+(base) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ conda activate CR[KTR
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ python run_Aconda activate CTRscript -f fibinet_all_10_dro50_adam_l2e-4_lr.log exit[Kpython run_fibinet_all.py [8Pconda activate CTRscript -f fibinet_all_10_dro50_adam_l2e-4.log exit[Kpython run_fibinet_all.py [8Pconda activate CTR[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kpython run_AFN_all.py 
+2022-12-23 22:54:51.644251: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-23 22:54:53.010215: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-12-23 22:54:53.010330: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-12-23 22:54:53.010343: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+rows30: 45840617
+1
+2
+3
+cuda ready...
+/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/layers/utils.py:61: FutureWarning: The behavior of `series[i:j]` with an integer-dtype index is deprecated. In a future version, this will be treated as *label-based* indexing, consistent with e.g. `series[i]` lookups. To retain the old behavior, use `series.iloc[i:j]`. To get the future behavior, use `series.loc[i:j]`.
+  return [None if x is None else x[start:stop] for x in arrays]
+cuda:4
+Train on 29337994 samples, validate on 7334499 samples, 7163 steps per epoch
+Epoch 1/10
+986s - loss:  0.4754 - binary_crossentropy:  0.4750 - auc:  0.7702 - val_binary_crossentropy:  0.4659 - val_auc:  0.7825
+Epoch 2/10
+984s - loss:  0.4575 - binary_crossentropy:  0.4562 - auc:  0.7947 - val_binary_crossentropy:  0.4624 - val_auc:  0.7870
+Epoch 3/10
+985s - loss:  0.4520 - binary_crossentropy:  0.4499 - auc:  0.8020 - val_binary_crossentropy:  0.4611 - val_auc:  0.7886
+Epoch 4/10
+988s - loss:  0.4491 - binary_crossentropy:  0.4464 - auc:  0.8059 - val_binary_crossentropy:  0.4605 - val_auc:  0.7893
+Epoch 5/10
+999s - loss:  0.4471 - binary_crossentropy:  0.4439 - auc:  0.8086 - val_binary_crossentropy:  0.4609 - val_auc:  0.7893
+Epoch 6/10
+1000s - loss:  0.4455 - binary_crossentropy:  0.4420 - auc:  0.8107 - val_binary_crossentropy:  0.4611 - val_auc:  0.7893
+Epoch 7/10
+999s - loss:  0.4442 - binary_crossentropy:  0.4403 - auc:  0.8125 - val_binary_crossentropy:  0.4609 - val_auc:  0.7893
+Epoch 8/10
+992s - loss:  0.4430 - binary_crossentropy:  0.4388 - auc:  0.8141 - val_binary_crossentropy:  0.4614 - val_auc:  0.7890
+Epoch 9/10
+991s - loss:  0.4419 - binary_crossentropy:  0.4374 - auc:  0.8156 - val_binary_crossentropy:  0.4618 - val_auc:  0.7887
+Epoch 10/10
+988s - loss:  0.4408 - binary_crossentropy:  0.4360 - auc:  0.8170 - val_binary_crossentropy:  0.4628 - val_auc:  0.7879
+
+test LogLoss 0.4628
+test AUC 0.7882
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ 

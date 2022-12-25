@@ -1,0 +1,44 @@
+Script started on 2022-12-18 17:25:49+0800
+(base) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ conda aciva[K[K[Ktivate CTR
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ [ytj[K[K[K[Kpython run_xdeepfm_all.py 
+2022-12-18 17:26:25.822533: I tensorflow/core/platform/cpu_feature_guard.cc:193] This TensorFlow binary is optimized with oneAPI Deep Neural Network Library (oneDNN) to use the following CPU instructions in performance-critical operations:  AVX2 FMA
+To enable them in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2022-12-18 17:26:27.220509: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer.so.7'; dlerror: libnvinfer.so.7: cannot open shared object file: No such file or directory
+2022-12-18 17:26:27.220620: W tensorflow/compiler/xla/stream_executor/platform/default/dso_loader.cc:64] Could not load dynamic library 'libnvinfer_plugin.so.7'; dlerror: libnvinfer_plugin.so.7: cannot open shared object file: No such file or directory
+2022-12-18 17:26:27.220635: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Cannot dlopen some TensorRT libraries. If you would like to use Nvidia GPU with TensorRT, please make sure the missing libraries mentioned above are installed properly.
+rows40: 45840617
+1
+2
+3
+cuda ready...
+/cfs/user/liweiqin/anaconda3/envs/CTR/lib/python3.10/site-packages/deepctr_torch/layers/utils.py:61: FutureWarning: The behavior of `series[i:j]` with an integer-dtype index is deprecated. In a future version, this will be treated as *label-based* indexing, consistent with e.g. `series[i]` lookups. To retain the old behavior, use `series.iloc[i:j]`. To get the future behavior, use `series.loc[i:j]`.
+  return [None if x is None else x[start:stop] for x in arrays]
+cuda:3
+Train on 29337994 samples, validate on 7334499 samples, 7163 steps per epoch
+Epoch 1/10
+1068s - loss:  0.4640 - binary_crossentropy:  0.4640 - auc:  0.7847 - val_binary_crossentropy:  0.4573 - val_auc:  0.7930
+Epoch 2/10
+1060s - loss:  0.3809 - binary_crossentropy:  0.3808 - auc:  0.8634 - val_binary_crossentropy:  0.4797 - val_auc:  0.7764
+Epoch 3/10
+1052s - loss:  0.3439 - binary_crossentropy:  0.3438 - auc:  0.8883 - val_binary_crossentropy:  0.4955 - val_auc:  0.7691
+Epoch 4/10
+1047s - loss:  0.3280 - binary_crossentropy:  0.3280 - auc:  0.8979 - val_binary_crossentropy:  0.5111 - val_auc:  0.7654
+Epoch 5/10
+1051s - loss:  0.3192 - binary_crossentropy:  0.3191 - auc:  0.9033 - val_binary_crossentropy:  0.5272 - val_auc:  0.7597
+Epoch 6/10
+1057s - loss:  0.3131 - binary_crossentropy:  0.3130 - auc:  0.9070 - val_binary_crossentropy:  0.5424 - val_auc:  0.7559
+Epoch 7/10
+1075s - loss:  0.3084 - binary_crossentropy:  0.3083 - auc:  0.9098 - val_binary_crossentropy:  0.5568 - val_auc:  0.7535
+Epoch 8/10
+1071s - loss:  0.3048 - binary_crossentropy:  0.3047 - auc:  0.9119 - val_binary_crossentropy:  0.5696 - val_auc:  0.7504
+^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[B^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[A^[[AEpoch 9/10
+1051s - loss:  0.3019 - binary_crossentropy:  0.3018 - auc:  0.9136 - val_binary_crossentropy:  0.5817 - val_auc:  0.7475
+Epoch 10/10
+1056s - loss:  0.2994 - binary_crossentropy:  0.2993 - auc:  0.9150 - val_binary_crossentropy:  0.5903 - val_auc:  0.7458
+
+test LogLoss 0.59
+test AUC 0.7461
+(CTR) liweiqin@VM-145-241-ubuntu:/cfs/user/liweiqin/code/kkcode/bigdata_ex3/DeepCTR-Torch/examples$ python run_xdeepfm_all.py [8Pconda activate CTRtmux attach -t ctrconda activate CTR[3Ptmux new -s ctrls[K[2Pps -unvidia-smitensorboard --logdir output/v11/log/[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kexit
+exit
+
+Script done on 2022-12-18 22:32:54+0800
